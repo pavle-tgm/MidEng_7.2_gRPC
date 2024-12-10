@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "election";
+
+service ElectionService {
+  rpc getElectionData(ElectionRequest) returns (ElectionResponse) {}
+}
+
+message ElectionRequest {
+  string electionId = 1;  // ID der Wahl, um Daten anzufordern.
+}
+
+message ElectionResponse {
+  string electionId = 1;
+  string candidateName = 2;
+  int32 votes = 3;
+}
