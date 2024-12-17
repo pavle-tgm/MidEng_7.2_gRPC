@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service ElectionService {
+  rpc getElectionData(ElectionRequest) returns (ElectionResponse) {}
+}
+
+message ElectionRequest {
+  string electionId = 1;
+}
+
+message CandidateData {
+  string candidateName = 1;
+  int32 votes = 2;
+}
+
+message ElectionResponse {
+  string electionId = 1;
+  repeated CandidateData candidates = 2;  // Liste der Kandidaten
+}
