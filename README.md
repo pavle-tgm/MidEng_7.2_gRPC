@@ -45,8 +45,8 @@ Nach dem Kompilieren sollten **zwei Dateien** erstellt werden:
   
 - `election_pb2_grpc.py` (Service-Stub für Server und Client)
   
-- `election_server.py`
-  
+
+`election_server.py`
 
 ```python
 import grpc
